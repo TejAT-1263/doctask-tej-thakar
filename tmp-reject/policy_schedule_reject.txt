@@ -1,0 +1,14 @@
+Private Car Package Policy Schedule
+
+Insurer: Example General Insurance Co. Ltd.
+Policy Number: PC-IND-778412
+Insured Name: Rohan Mehta
+Vehicle Registration: MH12AB4581
+Policy Period: 2026-01-01 to 2026-12-31
+IDV: INR 3,20,000
+
+Important Conditions:
+1. Vehicle is insured for private use only. Use for hire or reward is excluded.
+2. Own-damage claims must be intimated within 7 days of the incident.
+3. Driver must hold a valid and effective driving licence on the date of loss.
+4. Total payable amount cannot exceed the insured declared value.

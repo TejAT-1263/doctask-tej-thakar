@@ -1,0 +1,9 @@
+Claims Review Rulebook
+
+Reject or escalate the claim if any of the following apply:
+
+1. Claimed amount exceeds the insured declared value.
+2. Claim intimation is made more than 7 days after the incident without justification.
+3. Damage pattern is materially inconsistent with the accident narrative.
+4. Vehicle was used for commercial hire despite private-use coverage.
+5. Driver licence was expired or invalid on the date of loss.

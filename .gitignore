@@ -1,0 +1,41 @@
+# Environment — never commit real keys
+.env
+.env.*
+!.env.example
+.deps-installed
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+.coverage
+htmlcov/
+
+# Virtual envs
+.venv/
+venv/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Database files — never commit local DBs
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+
+# Postgres Docker volume
+postgres_data/
+
+PROGRESS.MD
+TASK.MD

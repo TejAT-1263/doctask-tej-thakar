@@ -1,0 +1,11 @@
+Policy Schedule
+
+Policy Number: POL-IND-44721
+Insured: Test User
+Coverage Type: Home contents and interior fixtures
+Policy Period: 2026-01-01 to 2026-12-31
+
+Relevant terms:
+- Water damage from accidental ingress is covered.
+- Maximum payout for a single incident: INR 200000
+- Claims must be reported within 7 days of incident.

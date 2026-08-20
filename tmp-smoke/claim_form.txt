@@ -1,0 +1,15 @@
+Claim Form
+
+Claim Number: CLM-2026-0811-001
+Policy Number: POL-IND-44721
+Claimant: Test User
+Incident Date: 2026-08-03
+Reported Date: 2026-08-04
+Incident Type: Water damage
+Location: Flat 302, Example Residency, Pune
+
+Summary:
+Heavy rain caused water ingress through the ceiling and damaged the living room wall, sofa, and television.
+
+Claimed Amount:
+INR 185000

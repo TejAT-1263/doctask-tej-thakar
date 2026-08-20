@@ -1,0 +1,40 @@
+HOMEOWNER INSURANCE POLICY
+
+Policy Number: POL-789-XYZ
+Insured: Priya Sharma
+Property: 14 Maple Grove, Pune 411001
+Policy Period: January 1, 2026 – December 31, 2026
+Premium: INR 45,000 per annum
+
+COVERAGE DETAILS:
+
+1. DWELLING COVERAGE
+   Limit: INR 50,000 per occurrence (USD equivalent for processing)
+   Deductible: $5,000 per occurrence
+   Covered perils: fire, water damage (internal plumbing), windstorm, theft
+
+2. PERSONAL PROPERTY COVERAGE
+   Limit: $25,000
+   Deductible: $1,000
+
+3. LIABILITY COVERAGE
+   Limit: $100,000 per occurrence
+
+EXCLUSIONS:
+- Damage due to flood or surface water
+- Pre-existing structural defects
+- Wear and tear
+- Business equipment in home office
+
+CLAIMS RULES:
+- All claims must be filed within 30 days of incident
+- Claimant must provide original purchase receipts for items over $1,000
+- Adjuster inspection is required for claims over $10,000
+- Maximum single-incident payout shall not exceed policy coverage limit of $50,000
+- Fraudulent claims will result in policy cancellation
+
+CLAIMS CONTACT: claims@insureco.example.com | 1-800-INSURE-1
+
+Policy issued by: InSureCo Insurance Ltd.
+Underwriter signature: [on file]
+Date: December 15, 2025

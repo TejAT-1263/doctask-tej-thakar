@@ -1,0 +1,21 @@
+Motor Insurance Claim Form
+
+Insurer: Example General Insurance Co. Ltd.
+Claim Number: MTR-2026-08-1107
+Policy Number: PC-IND-778412
+Insured Name: Rohan Mehta
+Vehicle: 2022 Maruti Baleno
+Registration Number: MH12AB4581
+
+Incident Date: 2026-07-03
+Claim Intimation Date: 2026-08-09
+Location of Accident: Mumbai-Pune Expressway
+Nature of Loss: Major front-end collision and engine damage after impact with divider
+
+Declared Repair Estimate: INR 4,85,000
+Driver at Time of Loss: Rohan Mehta
+Driving Licence Number: MH14-2015-998877
+Purpose of Use at Time of Accident: Personal use
+
+Statement:
+The vehicle skidded during rain and hit the divider. No third party was involved.

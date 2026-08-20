@@ -1,0 +1,24 @@
+INSURANCE CLAIM FORM
+
+Claim Number: CLM-2026-0042
+Claimant Name: Priya Sharma
+Policy Number: POL-789-XYZ
+Date of Incident: July 15, 2026
+Date of Submission: July 18, 2026
+
+INCIDENT DESCRIPTION:
+Water damage to kitchen and dining room caused by a burst pipe.
+Damage discovered on the morning of July 15, 2026.
+
+ITEMS CLAIMED:
+1. Kitchen cabinet replacement        $12,000
+2. Flooring (hardwood, 400 sq ft)    $18,000
+3. Drywall repair and painting         $8,000
+4. Appliance replacement               $7,000
+Total Claimed Amount:                $45,000
+
+Coverage Limit (per policy):         $50,000
+Deductible:                           $5,000
+
+Claimant Signature: Priya Sharma
+Date: July 18, 2026
