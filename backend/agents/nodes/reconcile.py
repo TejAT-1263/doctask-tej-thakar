@@ -67,7 +67,7 @@ def reconcile_node(state: GraphState, db: Session) -> GraphState:
         # have internal contradictions (e.g. treatment date before incident date,
         # totals that don't add up, conflicting section values).
         intra_prompt = INTRA_DOC_RECONCILE_PROMPT.format(
-            facts_json=json.dumps(facts, indent=2)[:8000],
+            facts_json=json.dumps(facts, indent=2)[:16000],
         )
         result_text = ""
         tok_in = tok_out = 0
@@ -125,7 +125,7 @@ def reconcile_node(state: GraphState, db: Session) -> GraphState:
                      output_summary="Intra-doc check failed — continuing without conflicts")
     else:
         conflict_prompt = RECONCILE_PROMPT.format(
-            facts_json=json.dumps(facts, indent=2)[:8000],
+            facts_json=json.dumps(facts, indent=2)[:16000],
             doc_types_json=json.dumps(doc_types, indent=2),
         )
 
@@ -323,6 +323,13 @@ def _generate_report(
 
     try:
         report_html, tok_in, tok_out = call_llm(prompt)
+        # Strip markdown code fences that some models wrap HTML in
+        report_html = report_html.strip()
+        if report_html.startswith("```"):
+            # Remove opening fence (```html or ``` etc.)
+            report_html = report_html.split("\n", 1)[1] if "\n" in report_html else report_html
+        if report_html.endswith("```"):
+            report_html = report_html.rsplit("```", 1)[0].strip()
         duration = int((time.monotonic() - t0) * 1000)
         log_node(db, run_id, "report_generation", stage=1,
                  decision=NodeDecision.CONTINUE,

@@ -1,9 +1,11 @@
 """
 LLM client wrapper.
 In tests, this is monkey-patched to return fixture responses (no live API key needed).
-In production, uses Groq (openai/gpt-oss-120b) via the OpenAI-compatible API.
+In production, uses Groq (openai/gpt-oss-120b) via the OpenAI-compatible API,
+with OpenRouter as an automatic fallback when all Groq keys fail.
 Free tier: console.groq.com — set GROQ_API_KEY in .env.
 Optional rotation is supported via GROQ_API_KEYS or GROQ_API_KEY_2/3/4...
+OpenRouter fallback: openrouter.ai — set OPENROUTER_API_KEY in .env.
 """
 import os
 from typing import Tuple
@@ -11,8 +13,12 @@ from typing import Tuple
 from config import get_settings
 
 # Groq LLM settings
-GROQ_BASE_URL = "https://api.groq.com/openai/v1"
-GROQ_MODEL    = "openai/gpt-oss-120b"  # 500 tok/s, 131k context, free developer tier
+GROQ_BASE_URL    = "https://api.groq.com/openai/v1"
+GROQ_MODEL       = "openai/gpt-oss-120b"  # 500 tok/s, 131k context, free developer tier
+
+# OpenRouter fallback settings
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+OPENROUTER_MODEL    = "openai/gpt-oss-120b"  # same model as Groq primary
 
 
 def _dedupe_keep_order(values: list[str]) -> list[str]:
@@ -206,12 +212,37 @@ def call_llm(prompt: str, max_tokens: int = 4096) -> Tuple[str, int, int]:
             tok_out = response.usage.completion_tokens
             return content, tok_in, tok_out
         except Exception as exc:
-            errors.append(f"key#{idx}: {exc}")
+            errors.append(f"groq key#{idx}: {exc}")
             if not _is_retryable_groq_error(exc) or idx == len(api_keys):
                 break
 
+    # ── OpenRouter fallback ───────────────────────────────────────────────────
+    settings = get_settings()
+    or_key = settings.openrouter_api_key or os.environ.get("OPENROUTER_API_KEY", "")
+    if or_key:
+        try:
+            client = OpenAI(
+                base_url=OPENROUTER_BASE_URL,
+                api_key=or_key,
+                default_headers={
+                    "HTTP-Referer": "https://github.com/TejAT-1263/doctask-tej-thakar",
+                    "X-Title": "doctask",
+                },
+            )
+            response = client.chat.completions.create(
+                model=OPENROUTER_MODEL,
+                max_tokens=max_tokens,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            content = response.choices[0].message.content
+            tok_in  = response.usage.prompt_tokens if response.usage else 0
+            tok_out = response.usage.completion_tokens if response.usage else 0
+            return content, tok_in, tok_out
+        except Exception as exc:
+            errors.append(f"openrouter: {exc}")
+
     raise RuntimeError(
-        "Groq request failed across all configured keys. "
+        "All LLM providers failed (Groq + OpenRouter). "
         + " | ".join(errors)
     )
 

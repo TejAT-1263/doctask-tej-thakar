@@ -61,7 +61,12 @@ def extract_node(state: GraphState, db: Session) -> GraphState:
     all_facts: list[ExtractedFact] = list(state.get("extracted_facts", []))
     retry_count = state.get("retry_count", 0)
 
+    # Track which docs have already been successfully extracted — skip on retry
+    already_extracted = {f["source_doc_id"] for f in all_facts if f.get("source_doc_id")}
+
     for doc_id, doc_type in classified.items():
+        if doc_id in already_extracted:
+            continue  # already extracted in a prior attempt — don't duplicate
         doc: Document = db.query(Document).filter_by(id=doc_id).first()
         if not doc or not doc.raw_text:
             continue
@@ -87,7 +92,7 @@ def extract_node(state: GraphState, db: Session) -> GraphState:
         prompt = context_block + base_prompt if context_block else base_prompt
 
         try:
-            result_text, tok_in, tok_out = call_llm(prompt)
+            result_text, tok_in, tok_out = call_llm(prompt, max_tokens=8192)
             facts_raw = parse_json_safe(result_text)
 
             if not isinstance(facts_raw, list):

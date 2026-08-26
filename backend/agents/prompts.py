@@ -289,6 +289,9 @@ No prose. No explanation. JSON only."""
 
 REPORT_GENERATION_PROMPT = """You are a technical writer generating a grounded analysis report for Indian insurance claims.
 
+CRITICAL: Output raw HTML only. Do NOT wrap output in markdown code fences (no ```html, no ```).
+Start your response directly with an HTML tag such as <div> or <h1>. Nothing before the first HTML tag.
+
 You have:
 - Classified documents: {classified_docs_json}
 - Extracted facts (with source citations): {facts_json}

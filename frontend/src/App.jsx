@@ -242,13 +242,19 @@ function ReviewItem({ item, report, onDecide }) {
             ref={bodyRef}
             style={{
               background: c.bg, borderRadius: 8, padding: '12px 16px',
-              fontFamily: font.mono, fontSize: 12, color: c.textMuted,
-              whiteSpace: 'pre-wrap', lineHeight: 1.7,
-              maxHeight: 260, overflowY: 'auto', marginBottom: 14,
+              fontFamily: item.item_type === 'report_section' ? font.body : font.mono,
+              fontSize: item.item_type === 'report_section' ? 13 : 12,
+              color: c.text,
+              whiteSpace: item.item_type === 'report_section' ? 'normal' : 'pre-wrap',
+              lineHeight: 1.7,
+              maxHeight: item.item_type === 'report_section' ? 480 : 260,
+              overflowY: 'auto', marginBottom: 14,
             }}
-          >
-            {item.body}
-          </div>
+            {...(item.item_type === 'report_section'
+              ? { dangerouslySetInnerHTML: { __html: item.body } }
+              : { children: item.body }
+            )}
+          />
 
           {/* HIGH-risk acknowledgement checkbox */}
           {isHighRisk && item.status === 'pending' && (
@@ -723,14 +729,22 @@ function UploadPane({ onRunCreated }) {
           <div style={{ fontSize:14, color:c.textMuted, marginBottom:6 }}>
             Drop files here or <span style={{ color:c.primary, fontWeight:500 }}>browse</span>
           </div>
-          <div style={{ fontSize:12, color:c.textFaint }}>PDF, DOCX, TXT — Hindi/English claim files supported</div>
+          <div style={{ fontSize:12, color:c.textFaint }}>PDF, DOCX, TXT · max 5 files per run</div>
           <input type="file" multiple accept=".pdf,.docx,.doc,.txt,.md"
             style={{ position:'absolute', inset:0, opacity:0, cursor:'pointer' }}
-            onChange={e => setFiles(Array.from(e.target.files))} />
+            onChange={e => {
+              const selected = Array.from(e.target.files)
+              if (selected.length > 5) {
+                alert('Maximum 5 files per run. Only the first 5 will be used.')
+                setFiles(selected.slice(0, 5))
+              } else {
+                setFiles(selected)
+              }
+            }} />
         </div>
         {files.length > 0 && (
           <div style={{ marginTop:10, background:c.primaryLight, borderRadius:8, padding:'10px 14px', fontSize:13, color:c.primary }}>
-            ✓ {files.length} file{files.length>1?'s':''} selected: {files.map(f=>f.name).join(', ')}
+            ✓ {files.length}/5 file{files.length>1?'s':''} selected: {files.map(f=>f.name).join(', ')}
           </div>
         )}
       </div>

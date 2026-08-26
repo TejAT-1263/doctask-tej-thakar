@@ -11,6 +11,8 @@ class Settings(BaseSettings):
     groq_api_key: str = ""
     groq_api_keys: str = ""
     demo_mode: bool = False
+    # OpenRouter fallback — used when all Groq keys fail
+    openrouter_api_key: str = ""
     # OpenAI key for text-embedding-3-small (RAG pipeline)
     # Leave blank to run without embeddings — similarity search returns empty results
     openai_api_key: str = ""
