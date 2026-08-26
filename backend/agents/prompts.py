@@ -86,51 +86,57 @@ RECONCILE_PROMPT = """You are a document reconciliation specialist reviewing Ind
 IMPORTANT: Your response must be valid JSON only — a JSON array and nothing else.
 Do not write any explanation, preamble, or prose. If there are no conflicts, respond with exactly: []
 
-Compare the extracted facts from multiple documents and identify contradictions.
+You have facts extracted from MULTIPLE documents. Each fact has a source_doc_id.
+Your job: find every case where facts from DIFFERENT documents contradict each other.
 
-Facts extracted so far:
+Facts extracted from all documents:
 {facts_json}
 
-Document types available:
+Document types:
 {doc_types_json}
 
-Find all cases where two or more DIFFERENT documents assert different values for the same field.
-Examples: claim amount in claim form (₹50,000) ≠ adjuster notes (₹45,000);
-policy number in claim form ≠ policy number in policy document;
-incident date in claim form ≠ adjuster notes.
+WHAT TO LOOK FOR — scan for ALL of the following discrepancy types:
 
-Do NOT flag anything if all facts come from the same document — that is not a conflict.
+1. NUMERICAL DIFFERENCES — any quantity that appears in more than one document with a different value.
+   This includes: rainfall mm, area in sq ft, rupee amounts (premium, claim, assessed), dates, percentages.
+   Even a small numerical difference (e.g. 174mm vs 180mm, 600 sqft vs 620 sqft, ₹8,400 vs ₹8,496)
+   MUST be flagged as a conflict.
 
-For each conflict, classify its TYPE:
-- FACTUAL: Same factual field, different values (amounts, names, policy numbers, etc.)
-- TEMPORAL: Same event but different dates or times
-- DEFINITIONAL: Same term used with different meaning across documents
-- OMISSION: A key fact is present in one document but entirely absent from another
+2. FACTUAL CONTRADICTIONS — the same field is stated differently across documents.
+   Examples: claim form says 180mm rainfall → surveyor report says 174mm;
+   claim form says 620 sq ft flooring → surveyor says 600 sq ft;
+   receipt shows ₹8,400 premium → policy schedule shows ₹8,496.
 
-Also assign a SEVERITY:
-- high: Could materially affect claim validity or payment (amount conflicts, date of loss discrepancies)
-- medium: Important but may have a benign explanation (minor date variation, terminology difference)
-- low: Minor inconsistency that is unlikely to affect the outcome
+3. TEMPORAL CONFLICTS — same event on different dates in different documents.
 
-Be CONSERVATIVE — only flag real contradictions supported by the extracted facts.
-Do not flag differences in phrasing if they mean the same thing.
-Dates that differ by 1 day may be a typo; flag medium, not high.
+4. OMISSIONS — a key fact present in one document is completely absent in another where it should appear.
+
+RULES:
+- ONLY compare facts from DIFFERENT source_doc_ids — never flag within the same document.
+- ANY numerical difference, no matter how small, must be flagged (do not dismiss small gaps as rounding).
+- Do not flag differences in phrasing that clearly mean the same thing.
+- Do not invent conflicts — only flag when two facts clearly contradict each other.
+
+SEVERITY:
+- high: Affects claim amount or validity (claim amount, assessed amount, policy dates, total loss values)
+- medium: Important discrepancy (rainfall mm, flooring area, premium shortfall)
+- low: Minor inconsistency unlikely to affect outcome
 
 Respond with a JSON array only:
 [
   {{
-    "doc_a_id": "<document id>",
-    "doc_b_id": "<document id>",
-    "field": "<what field conflicts>",
-    "value_a": "<value from doc_a>",
-    "value_b": "<value from doc_b>",
-    "description": "<plain English explanation of the conflict>",
+    "doc_a_id": "<source_doc_id of first document>",
+    "doc_b_id": "<source_doc_id of second document>",
+    "field": "<exact field name that conflicts, e.g. rainfall_mm or flooring_area_sqft or premium_paid>",
+    "value_a": "<value as stated in doc_a>",
+    "value_b": "<value as stated in doc_b>",
+    "description": "<one sentence: what the conflict is and why it matters>",
     "conflict_type": "<FACTUAL|TEMPORAL|DEFINITIONAL|OMISSION>",
     "severity": "<high|medium|low>"
   }}
 ]
 
-If there are no contradictions, return exactly: []
+If there are genuinely no contradictions, return exactly: []
 No prose. No explanation. JSON only."""
 
 

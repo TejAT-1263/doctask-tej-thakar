@@ -201,7 +201,7 @@ def call_llm(prompt: str, max_tokens: int = 4096) -> Tuple[str, int, int]:
     errors = []
     for idx, api_key in enumerate(api_keys, start=1):
         try:
-            client = OpenAI(base_url=GROQ_BASE_URL, api_key=api_key)
+            client = OpenAI(base_url=GROQ_BASE_URL, api_key=api_key, timeout=90.0)
             response = client.chat.completions.create(
                 model=GROQ_MODEL,
                 max_tokens=max_tokens,
@@ -224,6 +224,7 @@ def call_llm(prompt: str, max_tokens: int = 4096) -> Tuple[str, int, int]:
             client = OpenAI(
                 base_url=OPENROUTER_BASE_URL,
                 api_key=or_key,
+                timeout=90.0,
                 default_headers={
                     "HTTP-Referer": "https://github.com/TejAT-1263/doctask-tej-thakar",
                     "X-Title": "doctask",

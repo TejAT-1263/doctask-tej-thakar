@@ -124,8 +124,18 @@ def reconcile_node(state: GraphState, db: Session) -> GraphState:
                      error_detail=str(e),
                      output_summary="Intra-doc check failed — continuing without conflicts")
     else:
+        # Slim facts for conflict detection — source_excerpt not needed here,
+        # and omitting it keeps all facts within the token budget.
+        slim_facts = [
+            {
+                "source_doc_id": f.get("source_doc_id", ""),
+                "claim": f.get("claim", ""),
+                "confidence": f.get("confidence", 0),
+            }
+            for f in facts
+        ]
         conflict_prompt = RECONCILE_PROMPT.format(
-            facts_json=json.dumps(facts, indent=2)[:16000],
+            facts_json=json.dumps(slim_facts, indent=2)[:32000],
             doc_types_json=json.dumps(doc_types, indent=2),
         )
 

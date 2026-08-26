@@ -16,9 +16,30 @@ from api.search import router as search_router
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Startup / shutdown lifecycle (replaces deprecated @app.on_event)."""
+    import threading
+    from db.database import SessionLocal
+    from db.models import Run, RunStatus
+    from api.runs import _resume_agent
+
     init_db()
+
+    # Requirement: "Kill the process in the middle of a run and start it again.
+    # It continues from where it left off, and no finished work is lost."
+    #
+    # Runs in 'running' state at shutdown lost their background task.
+    # LangGraph's SQLite checkpointer preserved every completed node's output.
+    # Re-launch _resume_agent in a thread for each orphaned run — it calls
+    # graph.invoke(None, config) which resumes from the last checkpoint.
+    with SessionLocal() as db:
+        orphaned = db.query(Run).filter(Run.status == RunStatus.running).all()
+        orphaned_ids = [r.id for r in orphaned]
+
+    for run_id in orphaned_ids:
+        t = threading.Thread(target=_resume_agent, args=(run_id,), daemon=True)
+        t.start()
+
     yield
-    # Nothing to clean up on shutdown yet
+    # Nothing to clean up on shutdown
 
 
 app = FastAPI(
