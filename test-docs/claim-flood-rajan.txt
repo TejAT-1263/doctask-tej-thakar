@@ -1,0 +1,73 @@
+INSURANCE CLAIM FORM
+Palladium General Insurance Ltd.
+Claim Reference: CLM-2024-00142
+Date of Submission: 15 March 2024
+
+─────────────────────────────────────────
+SECTION A: CLAIMANT DETAILS
+─────────────────────────────────────────
+Full Name:        Rajan Mehta
+Date of Birth:    12 July 1978
+Address:          14-B, Shastri Nagar, Pune 411005, Maharashtra
+Mobile:           +91 98220 47831
+Email:            rajan.mehta@example.com
+PAN:              AAZMR1234K
+
+─────────────────────────────────────────
+SECTION B: POLICY DETAILS
+─────────────────────────────────────────
+Policy Number:    POL-PAL-88821
+Policy Type:      Comprehensive Home Insurance (Structure + Contents)
+Sum Insured:      ₹12,00,000 (Structure) + ₹3,50,000 (Contents)
+Policy Period:    01 April 2023 – 31 March 2024
+Premium Paid:     ₹8,400 (receipt no. RCP-20230401-00821)
+
+─────────────────────────────────────────
+SECTION C: INCIDENT DETAILS
+─────────────────────────────────────────
+Date of Incident:         14 March 2024
+Time of Incident:         Approx. 02:30 AM
+Nature of Loss:           Flood damage — heavy rainfall and overflowing storm drains
+Location of Incident:     14-B, Shastri Nagar, Pune 411005 (insured premises)
+
+Description of Incident:
+On the night of 13–14 March 2024, Pune received approximately 180mm of rainfall in
+six hours, classified by IMD as an Extremely Severe Rain event. The storm drains on
+Shastri Nagar Road overflowed by approximately 01:45 AM, and floodwater entered the
+ground floor of the insured property by 02:30 AM, reaching a depth of roughly 90cm
+at its peak.
+
+Damage sustained:
+  - Ground floor flooring (Italian marble, 620 sq ft): buckled and cracked
+  - Electrical wiring (ground floor): submerged, short-circuit throughout
+  - Kitchen modular units (base cabinets): water-logged, swollen, unusable
+  - Living room sofa set (3+2): soaked beyond recovery
+  - Television (Samsung 65", model QN65S90C): irreparable water damage
+  - Refrigerator (LG 506L, model GL-T512APZX): motor failure due to moisture
+  - Ground floor interior walls: extensive damp patches, plaster peeling
+
+Steps taken after incident:
+  - Water pumped out by municipality on 14 March afternoon
+  - Temporary electrical isolation done by licensed electrician (receipt enclosed)
+  - Damaged goods photographed and listed (inventory attached as Annexure 1)
+  - FIR not required (natural calamity, no third-party involvement)
+  - IMD rainfall alert bulletin for 13–14 March 2024, Pune: attached as Annexure 2
+
+─────────────────────────────────────────
+SECTION D: CLAIM AMOUNT
+─────────────────────────────────────────
+Structure damage (flooring, electrical, walls, kitchen):   ₹5,80,000 (estimated)
+Contents damage (furniture, appliances):                   ₹2,70,000 (estimated)
+Total Claim Amount:                                        ₹8,50,000
+
+Supporting estimates from licensed contractors enclosed as Annexure 3.
+
+─────────────────────────────────────────
+SECTION E: DECLARATION
+─────────────────────────────────────────
+I, Rajan Mehta, hereby declare that the above information is true and correct to the
+best of my knowledge. I have not filed this claim with any other insurer. The damage
+described occurred within the policy period and at the insured premises.
+
+Signature: R. Mehta
+Date: 15 March 2024

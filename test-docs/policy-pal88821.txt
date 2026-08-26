@@ -1,0 +1,100 @@
+POLICY SCHEDULE
+Palladium General Insurance Ltd.
+CIN: U66010MH2001PLC134321
+Registered Office: Palladium House, 7th Floor, Lower Parel, Mumbai 400013
+
+─────────────────────────────────────────
+POLICY DETAILS
+─────────────────────────────────────────
+Policy Number:        POL-PAL-88821
+Product Name:         PallaHome Comprehensive — Platinum
+Proposal Number:      PRP-2023-00392
+Date of Issue:        01 April 2023
+Policy Period:        01 April 2023 to 31 March 2024 (12 months)
+Date of Renewal:      Must be renewed before 31 March 2024
+
+─────────────────────────────────────────
+INSURED DETAILS
+─────────────────────────────────────────
+Name:                 Rajan Mehta
+Address:              14-B, Shastri Nagar, Pune 411005, Maharashtra
+PAN:                  AAZMR1234K
+Mobile:               +91 98220 47831
+
+─────────────────────────────────────────
+PROPERTY DETAILS
+─────────────────────────────────────────
+Insured Property:     14-B, Shastri Nagar, Pune 411005
+Construction Type:    RCC framed structure, brick masonry
+Year of Construction: 2009
+Carpet Area:          1,240 sq ft (ground floor + first floor)
+Occupancy:            Owner-occupied residential
+
+─────────────────────────────────────────
+COVERAGE SUMMARY
+─────────────────────────────────────────
+Section I — Building Structure
+  Sum Insured:        ₹12,00,000
+  Basis:              Reinstatement value
+  Covered perils:     Fire, lightning, explosion, aircraft damage, riot and strike,
+                      storm, cyclone, typhoon, tempest, flood, inundation,
+                      earthquake, subsidence, landslide, rockslide,
+                      impact damage, bursting of pipes, missile testing
+
+Section II — Contents (Household goods and personal effects)
+  Sum Insured:        ₹3,50,000
+  Basis:              Market value at time of loss
+  Covered perils:     Same as Section I
+
+Section III — Temporary Accommodation
+  Limit:              ₹30,000 (max 3 months at ₹10,000/month)
+  Trigger:            Property rendered uninhabitable by a covered peril
+
+─────────────────────────────────────────
+EXCLUSIONS (KEY)
+─────────────────────────────────────────
+1. Wilful destruction or intentional loss
+2. War, invasion, nuclear risk
+3. Wear and tear, depreciation, gradual deterioration
+4. Loss of cash, jewellery, securities (not declared under floater)
+5. Electrical or mechanical breakdown (not caused by a covered peril)
+6. Loss discovered only at stock-taking
+7. Pre-existing damage at time of policy inception
+
+─────────────────────────────────────────
+DEDUCTIBLES
+─────────────────────────────────────────
+Section I (Structure):   ₹5,000 per claim (compulsory)
+Section II (Contents):   ₹2,500 per claim (compulsory)
+
+─────────────────────────────────────────
+PREMIUM DETAILS
+─────────────────────────────────────────
+Basic Premium:           ₹7,200
+GST @ 18%:              ₹1,296
+  [Note: GST was ₹1,200 on proposal — revised to ₹1,296 on final policy]
+Total Premium:           ₹8,496
+  [Note: Receipt RCP-20230401-00821 records ₹8,400 — shortfall of ₹96]
+Mode of Payment:         NEFT
+Receipt Number:          RCP-20230401-00821
+
+─────────────────────────────────────────
+CLAIMS PROCEDURE
+─────────────────────────────────────────
+1. Notify Palladium within 7 days of loss.
+2. File a detailed claim form with supporting documents.
+3. Do not dispose of damaged property until surveyor inspection.
+4. A licensed surveyor will be appointed within 3 working days of intimation.
+5. Settlement will be processed within 30 days of receipt of all documents.
+
+Claims helpline: 1800-120-0088 (toll-free, 24x7)
+Email:           claims@palladiuminsurance.example.com
+
+─────────────────────────────────────────
+AUTHORISED SIGNATORY
+─────────────────────────────────────────
+Digitally signed by:   Chief Underwriting Officer, Palladium General Insurance Ltd.
+Date:                  01 April 2023
+
+This policy is subject to the standard terms and conditions of PallaHome Comprehensive
+(Policy Wordings version 4.2, available at www.palladiuminsurance.example.com).

@@ -1,0 +1,80 @@
+INDEPENDENT SURVEYOR'S REPORT
+Palladium General Insurance Ltd.
+Survey Reference:    SRV-2024-00142
+Original Claim Ref:  CLM-2024-00142
+Policy Number:       POL-PAL-88821
+
+─────────────────────────────────────────
+SURVEYOR DETAILS
+─────────────────────────────────────────
+Surveyor Name:       Priya Kulkarni, B.E. (Civil), IRDA Lic. No. SLA-MH-2014-00892
+Survey Date:         18 March 2024
+Inspection Address:  14-B, Shastri Nagar, Pune 411005
+
+─────────────────────────────────────────
+OBSERVATIONS AT SITE
+─────────────────────────────────────────
+Property condition at time of inspection (4 days post-flood):
+- Ground floor: residual dampness throughout, water marks at 88cm height on walls
+- Flooring: Italian marble buckled across ~600 sq ft (claimant stated 620 sq ft)
+- Electrical panel: tripped and isolated; visible corrosion on ground-floor circuits
+- Kitchen: base cabinets fully swollen, laminate peeling
+- IMD bulletin for 13–14 March event confirmed 174mm rainfall in 6 hours
+  [Note: Claimant's form states 180mm — IMD bulletin states 174mm; minor discrepancy]
+
+Contents at time of inspection:
+- Samsung TV: confirmed irreparable (display cracked, rear panel corroded)
+- LG Refrigerator: motor audibly failed on test start, confirmed total loss
+- Sofa set: confirmed water-damaged beyond recovery
+
+─────────────────────────────────────────
+SURVEYOR'S ASSESSMENT
+─────────────────────────────────────────
+Cause of loss: Flood / inundation — covered peril under Section I and Section II.
+No evidence of pre-existing damage. No evidence of wilful act or negligence.
+Claimant's description of incident is consistent with physical evidence at site
+and with IMD meteorological data for the event.
+
+Structure damage (Section I):
+  Flooring replacement (600 sq ft assessed, not 620 as claimed):   ₹2,80,000
+  Electrical rewiring — ground floor:                               ₹1,10,000
+  Kitchen modular base units (replacement):                         ₹85,000
+  Interior wall re-plastering and painting:                         ₹65,000
+  Section I Assessed Total:                                         ₹5,40,000
+  Less compulsory deductible:                                       (₹5,000)
+  Net Section I payable:                                            ₹5,35,000
+
+Contents damage (Section II):
+  Samsung TV (market value at loss date):                           ₹98,000
+  LG Refrigerator (market value at loss date):                      ₹62,000
+  Sofa set (market value at loss date):                             ₹45,000
+  Section II Assessed Total:                                        ₹2,05,000
+  Less compulsory deductible:                                       (₹2,500)
+  Net Section II payable:                                           ₹2,02,500
+
+TOTAL RECOMMENDED SETTLEMENT:                                       ₹7,37,500
+
+Note: Claimant's total claim was ₹8,50,000. The difference (₹1,12,500) arises from:
+  (a) 20 sq ft flooring area adjustment: −₹9,300
+  (b) Structure damage — contractor estimate vs. surveyor benchmark: −₹35,700
+  (c) Contents — depreciation applied per market value basis: −₹67,500
+
+─────────────────────────────────────────
+PREMIUM DISCREPANCY NOTE
+─────────────────────────────────────────
+Policy premium receipt (RCP-20230401-00821) records ₹8,400.
+Policy schedule states total premium ₹8,496 (GST revised from proposal to final).
+Shortfall of ₹96 noted. Recommend underwriting team verify whether policy is
+valid despite underpayment before settlement proceeds.
+
+─────────────────────────────────────────
+RECOMMENDATION
+─────────────────────────────────────────
+Recommend approval of claim for ₹7,37,500 subject to:
+1. Resolution of ₹96 premium shortfall
+2. Receipt of original receipts for contents (TV, refrigerator, sofa)
+3. Confirmation that no parallel claim filed with another insurer
+
+Surveyor Signature: P. Kulkarni
+IRDA Licence:       SLA-MH-2014-00892
+Date:               20 March 2024

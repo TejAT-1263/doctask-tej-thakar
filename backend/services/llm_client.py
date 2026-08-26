@@ -1,7 +1,7 @@
 """
 LLM client wrapper.
 In tests, this is monkey-patched to return fixture responses (no live API key needed).
-In production, uses Groq (llama-3.3-70b-versatile) via the OpenAI-compatible API.
+In production, uses Groq (openai/gpt-oss-120b) via the OpenAI-compatible API.
 Free tier: console.groq.com — set GROQ_API_KEY in .env.
 Optional rotation is supported via GROQ_API_KEYS or GROQ_API_KEY_2/3/4...
 """
@@ -12,7 +12,7 @@ from config import get_settings
 
 # Groq LLM settings
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"
-GROQ_MODEL    = "llama-3.3-70b-versatile"  # 280 tok/s, 128k context
+GROQ_MODEL    = "openai/gpt-oss-120b"  # 500 tok/s, 131k context, free developer tier
 
 
 def _dedupe_keep_order(values: list[str]) -> list[str]:

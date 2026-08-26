@@ -34,11 +34,19 @@ test-v: setup
 
 .PHONY: dev
 dev: setup
-	cd $(BACKEND) && uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+	cd $(BACKEND) && \
+	GROQ_API_KEYS="$$(grep '^GROQ_API_KEYS' ../.env | cut -d= -f2- | tr -d ' ')" \
+	GROQ_API_KEY="$$(grep '^GROQ_API_KEY=' ../.env | cut -d= -f2- | tr -d ' ')" \
+	DEMO_MODE=false \
+	uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
 .PHONY: mcp
 mcp: setup
-	cd $(BACKEND) && $(PYTHON) -m mcp_server.server
+	cd $(BACKEND) && \
+	GROQ_API_KEYS="$$(grep '^GROQ_API_KEYS' ../.env | cut -d= -f2- | tr -d ' ')" \
+	GROQ_API_KEY="$$(grep '^GROQ_API_KEY=' ../.env | cut -d= -f2- | tr -d ' ')" \
+	DEMO_MODE=false \
+	$(PYTHON) -m mcp_server.server
 
 .PHONY: up
 up:
